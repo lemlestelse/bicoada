@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parabéns — Assista ao Vídeo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="site-header">
+      <img src="logo.png" alt="Logo Sadia x Bauducco" class="logo-img">
+    </div>
+    <div class="video-banner">ASSISTA O VIDEO ATE O FINAL PARA GARANTIR SEUS PREMIOS</div>
+    <main class="quiz">
+      <div class="result-card">
+        <h3>🎁 Parabéns!</h3>
+        <p>Você concluiu o Quiz de Natal. Agora é só aproveitar o seu Natal especial Sadia x Bauducco.</p>
+        <div id="video-box" class="video-box">
+          <vturb-smartplayer id="vid-6920703b3752bd8e798ef081" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+          <script type="text/javascript">var s=document.createElement("script"); s.src="https://scripts.converteai.net/4d50ec90-88b5-42d8-ab2c-31839ec7381d/players/6920703b3752bd8e798ef081/v4/player.js", s.async=!0,document.head.appendChild(s);</script>
+        </div>
+        <div class="actions video-actions" id="video-actions" style="display:none">
+          <a id="cta-checkout" class="cta cta-primary" href="checkout.html">RECEBER PREMIOS</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var v = document.getElementById('vid-6920703b3752bd8e798ef081')
+      var actions = document.getElementById('video-actions')
+      function showActions(){ if(actions) { actions.style.display = 'grid' } }
+      if (v && typeof v.addEventListener === 'function') {
+        v.addEventListener('ended', showActions)
+      }
+      setTimeout(showActions, 30000)
+    })
+  </script>
+</body>
+</html>

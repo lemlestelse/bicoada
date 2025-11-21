@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carregando — Kit Natal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading-overlay">
+    <div class="loading-card">
+      <p class="loading-title">Aguarde… estamos separando seu Kit Natal.</p>
+      <p class="loading-sub">Estamos verificando seu quiz e preparando seu kit conforme a disponibilidade de hoje.</p>
+      <p class="loading-alert">Restam poucos kits — continue para garantir o seu.</p>
+      <div class="loading-bar"><span id="loading-fill"></span></div>
+      <div class="loading-percent" id="loading-percent">0%</div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var fill = document.getElementById('loading-fill')
+      var pct = document.getElementById('loading-percent')
+      var p = 0
+      var dur = 7000
+      var stepMs = 100
+      var inc = 100 / (dur / stepMs)
+      var timer = setInterval(function() {
+        p = Math.min(100, p + inc)
+        if (fill) fill.style.width = p + '%'
+        if (pct) pct.textContent = String(Math.round(p)) + '%'
+        if (p >= 100) {
+          clearInterval(timer)
+          window.location.href = 'video.html'
+        }
+      }, stepMs)
+    })
+  </script>
+</body>
+</html>

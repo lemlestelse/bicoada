@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz de Natal — Sadia x Bauducco</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="site-header">
+      <img src="logo.png" alt="Logo Sadia x Bauducco" class="logo-img">
+    </div>
+    <main class="quiz" id="quiz">
+      <div class="step" data-step="1">
+        <p class="question">Qual é a data em que comemoramos o Natal no Brasil?</p>
+        <img src="p1.png" alt="Imagem ilustrativa da pergunta 1" class="question-image">
+        <ul class="options">
+          <li><button class="option" data-correct="false">20 de dezembro</button></li>
+          <li><button class="option" data-correct="false">24 de dezembro</button></li>
+          <li><button class="option" data-correct="true">25 de dezembro</button></li>
+          <li><button class="option" data-correct="false">31 de dezembro</button></li>
+        </ul>
+        <button class="cta cta-secondary next" disabled>CONTINUAR QUESTIONÁRIO</button>
+      </div>
+
+      <div class="step" data-step="2" hidden>
+        <p class="question">Qual é a comida tradicional que muitas famílias brasileiras comem na ceia de Natal?</p>
+        <img src="p2.png" alt="Imagem ilustrativa da pergunta 2" class="question-image">
+        <ul class="options">
+          <li><button class="option" data-correct="false">Feijoada</button></li>
+          <li><button class="option" data-correct="false">Churrasco</button></li>
+          <li><button class="option" data-correct="true">Peru assado</button></li>
+          <li><button class="option" data-correct="false">Sushi</button></li>
+        </ul>
+        <button class="cta cta-secondary next" disabled>CONTINUAR QUESTIONÁRIO</button>
+      </div>
+
+      <div class="step" data-step="3" hidden>
+        <p class="question">Quem costuma entregar os presentes de Natal, segundo a tradição?</p>
+        <img src="p3.png" alt="Imagem ilustrativa da pergunta 3" class="question-image">
+        <ul class="options">
+          <li><button class="option" data-correct="false">Coelho da Páscoa</button></li>
+          <li><button class="option" data-correct="true">Papai Noel</button></li>
+          <li><button class="option" data-correct="false">Duendes</button></li>
+          <li><button class="option" data-correct="false">Os Três Porquinhos</button></li>
+        </ul>
+        <button class="cta cta-secondary next" disabled>CONTINUAR QUESTIONÁRIO</button>
+      </div>
+
+      <div class="step" data-step="4" hidden>
+        <p class="question">Qual destes é um símbolo típico de Natal no Brasil?</p>
+        <img src="p4.png" alt="Imagem ilustrativa da pergunta 4" class="question-image">
+        <ul class="options">
+          <li><button class="option" data-correct="true">Árvore enfeitada</button></li>
+          <li><button class="option" data-correct="false">Fogos de Carnaval</button></li>
+          <li><button class="option" data-correct="false">Máscara de Halloween</button></li>
+          <li><button class="option" data-correct="false">Bandeirola de Festa Junina</button></li>
+        </ul>
+        <button class="cta cta-secondary next" disabled>CONTINUAR QUESTIONÁRIO</button>
+      </div>
+
+      <div class="step" data-step="5" hidden>
+        <p class="question">O que muitas famílias fazem na noite de Natal?</p>
+        <img src="p5.png" alt="Imagem ilustrativa da pergunta 5" class="question-image">
+        <ul class="options">
+          <li><button class="option" data-correct="true">Abrem os presentes</button></li>
+          <li><button class="option" data-correct="false">Tomam banho de piscina</button></li>
+          <li><button class="option" data-correct="false">Soltam pipa</button></li>
+          <li><button class="option" data-correct="false">Jogam futebol</button></li>
+        </ul>
+        <button class="cta cta-secondary next" disabled>CONTINUAR QUESTIONÁRIO</button>
+      </div>
+
+      <div class="step" data-step="done" hidden>
+        <div class="result-card">
+          <h3>🎁 Parabéns!</h3>
+          <p>Você concluiu o Quiz de Natal. Agora é só aproveitar o seu Natal especial Sadia x Bauducco.</p>
+          <div class="actions">
+            <button class="cta cta-brown" id="go-checkout">IR PARA O CHECKOUT</button>
+            <button class="cta cta-secondary" id="watch-video">ASSISTIR AO VÍDEO</button>
+          </div>
+          <div id="video-box" hidden>
+            <video id="congrats-video" controls preload="metadata" class="video-player">
+              <source src="natalgp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
